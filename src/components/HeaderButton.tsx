@@ -20,7 +20,7 @@ export default function HeaderButton({ href, text }: HeaderButtonProps) {
       {text}
       <span 
         className="
-          absolute bottom-0 left-0 block h-[3px] w-full 
+          absolute bottom-0 left-0 block h-[2px] w-full 
           transform scale-x-0 group-hover:scale-x-75 
           transition-transform duration-300 ease-in-out
           origin-left

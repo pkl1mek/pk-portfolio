@@ -18,6 +18,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+      'sm': '640px',
+      'md': '1024px',
+      'lg': '1200px',
+      'xl': '1440px',
+    },
       fontFamily: {
         sans: ['var(--font-satoshi)', ...defaultTheme.fontFamily.sans],
       },
@@ -58,18 +64,15 @@ module.exports = {
       })
     }),
 
-    plugin(function ({ addComponents, theme }) {
-      addComponents({
-        '.glass-card': {
-          maxWidth: theme('maxWidth.md'),
-          width: '100%',
-          padding: theme('padding.8'),
-          borderRadius: theme('borderRadius.full'),
-          backgroundImage: theme('backgroundImage.glass-gradient'),
-          backdropFilter: 'blur(10px)',
-          boxShadow: 'inset 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-          borderWidth: '1px',
-          borderColor: theme('colors.stroke'),
+    plugin(function ({ addUtilities, theme }) {
+      addUtilities({
+        '.glass': {
+          'backgroundImage': theme('backgroundImage.glass-gradient'),
+          'backdrop-filter': 'blur(12px)',
+          'filter': 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25))',
+          'box-shadow': 'inset 0 0 0 1.5px rgba(255, 255, 255, 0.05)',
+          'border-width': '3px',
+          'border-color': theme('colors.stroke'),
         },
       })
     }),
