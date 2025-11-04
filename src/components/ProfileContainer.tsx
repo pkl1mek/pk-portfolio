@@ -6,8 +6,9 @@ export default function ProfileContainer() {
   return (
     <div
       className="
+      flex-shrink-0
         flex flex-col items-center
-        gap-9 p-6
+        gap-12
         max-w-[362px]
       "
     >

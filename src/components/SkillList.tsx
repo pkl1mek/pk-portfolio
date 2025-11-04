@@ -1,17 +1,30 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import skillsData from '@/data/skills.json';
 import SkillItem from './SkillItem';
 
+const skillsInFirstRow = 5;
+
+const getShuffledSkills = () => {
+  const shuffled = [...skillsData].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, skillsInFirstRow);
+};
+
 export default function SkillList() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const skillsInFirstRow = 5;
   
+  const [initialSkills, setInitialSkills] = useState(
+    skillsData.slice(0, skillsInFirstRow)
+  );
+
+  useEffect(() => {
+    setInitialSkills(getShuffledSkills());
+  }, []);
+
   const hasMoreSkills = skillsData.length > skillsInFirstRow;
-  const skillsToShow = isOpen ? skillsData : skillsData.slice(0, skillsInFirstRow);
+  const skillsToShow = isOpen ? skillsData : initialSkills;
   const remainingCount = skillsData.length - skillsInFirstRow;
 
   return (
@@ -32,7 +45,7 @@ export default function SkillList() {
             font-bold text-sm text-primary
             border-[2px] border-stroke
             transition-all
-            ${isOpen ? 'h-6 w-9 rounded-[24px]' : 'px-2 py-0.5 rounded-[24px]'}
+            ${isOpen ? 'h-6 w-8 rounded-[36px]' : 'px-2 py-0.5 rounded-[24px]'}
           `}
         >
           {isOpen ? (
@@ -40,7 +53,7 @@ export default function SkillList() {
               src="/icons/arrow_up.svg"
               alt="Pokaż mniej"
               width={16}
-              height={16}
+              height={18}
               className="neon neon-primary"
             />
           ) : (

@@ -1,9 +1,11 @@
 import ProfileContainer from '@/components/ProfileContainer';
 import InfoContainer from '@/components/InfoContainer';
+import FirmContainer from '@/components/FirmContainer';
 
 export default function HomePage() {
   return (
-    <main className="flex w-full flex-1 flex-col items-center">
+    <div className="flex w-full flex-1 flex-col">
+      {/* --- Sekcja Hero --- */}
       <div
         className="
         w-full flex flex-col md:flex-row
@@ -38,6 +40,7 @@ export default function HomePage() {
           "
         />
       </div>
+
       <section id="o-mnie" className="w-full py-20 text-start">
         <h2 className="relative inline-block text-[41px] font-black text-primary">
           Kim jestem
@@ -48,11 +51,11 @@ export default function HomePage() {
             "
           />
         </h2>
-        <div className="mt-12 flex flex-col md:flex-row gap-16">
+        <div className="mt-12 flex flex-col md:flex-row gap-16 md:items-stretch">
           <ProfileContainer />
           <InfoContainer />
         </div>
       </section>
-    </main>
+    </div>
   );
 }
