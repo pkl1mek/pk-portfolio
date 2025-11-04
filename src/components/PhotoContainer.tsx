@@ -6,7 +6,7 @@ export default function PhotoContainer() {
       className="
         flex flex-col items-center 
         gap-2.5 p-4 
-        bg-glass-gradient glass 
+        bg-glass-gradient glass
         rounded-[36px]
         max-w-[362px]
         max-h-[419px]

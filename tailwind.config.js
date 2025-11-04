@@ -16,6 +16,16 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
+  safelist: [
+    'neon-primary',
+    'neon-green',
+    'neon-purple',
+    'neon-blue',
+    'neon-yellow',
+    'neon-background',
+    'neon-stroke',
+  ],
   theme: {
     extend: {
       screens: {
@@ -67,8 +77,7 @@ module.exports = {
     plugin(function ({ addUtilities, theme }) {
       addUtilities({
         '.glass': {
-          'backgroundImage': theme('backgroundImage.glass-gradient'),
-          'backdrop-filter': 'blur(12px)',
+          'backdrop-filter': 'blur(1px)',
           'filter': 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25))',
           'box-shadow': 'inset 0 0 0 1.5px rgba(255, 255, 255, 0.05)',
           'border-width': '3px',

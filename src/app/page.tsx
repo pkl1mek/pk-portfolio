@@ -1,5 +1,5 @@
-
-import ProfileContainer from "@/components/ProfileContainer";
+import ProfileContainer from '@/components/ProfileContainer';
+import InfoContainer from '@/components/InfoContainer';
 
 export default function HomePage() {
   return (
@@ -38,7 +38,7 @@ export default function HomePage() {
           "
         />
       </div>
-      <section id="about-me" className="w-full py-20 text-start">
+      <section id="o-mnie" className="w-full py-20 text-start">
         <h2 className="relative inline-block text-[41px] font-black text-primary">
           Kim jestem
           <span
@@ -48,9 +48,11 @@ export default function HomePage() {
             "
           />
         </h2>
-        <ProfileContainer />
+        <div className="mt-12 flex flex-col md:flex-row gap-16">
+          <ProfileContainer />
+          <InfoContainer />
+        </div>
       </section>
-
     </main>
   );
 }
