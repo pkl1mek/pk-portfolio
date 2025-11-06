@@ -16,7 +16,6 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-
   safelist: [
     'neon-primary',
     'neon-green',
@@ -27,13 +26,12 @@ module.exports = {
     'neon-stroke',
   ],
   theme: {
-    extend: {
-      screens: {
-      'sm': '640px',
-      'md': '1024px',
-      'lg': '1200px',
-      'xl': '1440px',
+    screens: {
+      'sm': '320px',
+      'lg': '1024px',
+      'xl': '1920px',
     },
+    extend: {
       fontFamily: {
         sans: ['var(--font-satoshi)', ...defaultTheme.fontFamily.sans],
       },
@@ -73,9 +71,8 @@ module.exports = {
         ...neonUtilities,
       })
     }),
-
-    plugin(function ({ addUtilities, theme }) {
-      addUtilities({
+    plugin(function ({ addComponents, theme }) {
+      addComponents({
         '.glass': {
           'backdrop-filter': 'blur(1px)',
           'filter': 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25))',

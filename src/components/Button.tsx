@@ -17,7 +17,8 @@ export default function Button({ content, iconName, radius }: ButtonProps) {
         flex items-center justify-center
         gap-2.5 
         px-6 py-2 
-        font-bold text-[20px] text-primary
+        font-bold text-primary
+        text-[20px] lg:text-[17px] xl:text-2xl
         glass bg-glass-gradient
         transition-transform duration-200 hover:scale-105
         ${radiusStyle}

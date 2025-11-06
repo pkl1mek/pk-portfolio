@@ -42,9 +42,10 @@ export default function SkillList() {
           onClick={() => setIsOpen(!isOpen)}
           className={`
             flex items-center justify-center
-            font-bold text-sm text-primary
+            font-bold text-primary
             border-[2px] border-stroke
             transition-all
+            text-sm lg:text-xs xl:text-[17px]
             ${isOpen ? 'h-6 w-8 rounded-[36px]' : 'px-2 py-0.5 rounded-[24px]'}
           `}
         >

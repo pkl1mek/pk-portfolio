@@ -1,0 +1,17 @@
+[
+  {
+    "iconName": "web-development.svg",
+    "title": "Branding & Design",
+    "description": "Tworzę unikalne identyfikacje wizualne, które wyróżniają markę na rynku."
+  },
+  {
+    "iconName": "ux.svg",
+    "title": "Strony Webowe",
+    "description": "Buduję szybkie, responsywne i zoptymalizowane strony internetowe w Next.js."
+  },
+  {
+    "iconName": "graphic.svg",
+    "title": "Konsultacje UX/UI",
+    "description": "Analizuję i projektuję intuicyjne interfejsy, dbając o doświadczenia użytkownika."
+  }
+]

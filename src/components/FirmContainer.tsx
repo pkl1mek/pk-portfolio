@@ -19,10 +19,10 @@ export default function FirmContainer({
       className="
         glass 
         flex items-center 
-        gap-2.5 
-        px-4 py-2 
+        gap-2 lg:gap-2.5 
+        px-3 lg:px-4 py-2 
         rounded-[36px]
-        h-20
+        h-auto lg:h-20
       "
     >
       <Image
@@ -30,13 +30,16 @@ export default function FirmContainer({
         alt={logoAlt}
         width={60}
         height={60}
-        className="rounded-[36px] object-cover"
+        className="
+          w-12 h-12 lg:w-[60px] lg:h-[60px] 
+          rounded-2xl  object-cover
+        "
       />
-      <div className="flex flex-col gap-2.5">
-        <p className="text-[20px] font-bold text-primary">
+      <div className="flex flex-col gap-1 lg:gap-2.5">
+        <p className="font-bold text-primary whitespace-nowrap text-[17px] lg:text-[17px] xl:text-[20px]">
           {jobTitle}
         </p>
-        <p className="text-[17px] font-medium text-primary neon neon-green">
+        <p className="font-medium text-primary neon neon-green whitespace-nowrap text-sm lg:text-[14px] xl:text-[17px]">
           {workDuration}
         </p>
       </div>

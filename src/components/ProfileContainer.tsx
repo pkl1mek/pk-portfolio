@@ -9,7 +9,7 @@ export default function ProfileContainer() {
       flex-shrink-0
         flex flex-col items-center
         gap-12
-        max-w-[362px]
+        max-w-[362px] xl:w-[362px]
       "
     >
       <PhotoContainer />

@@ -1,29 +1,30 @@
 import React from 'react';
 
-interface SkillItemProps {
-  name: string;
+interface ProjectTagProps {
+  text: string;
   color: string;
 }
 
-export default function SkillItem({ name, color }: SkillItemProps) {
+export default function ProjectTag({ text, color }: ProjectTagProps) {
   const neonColorClass = `neon-${color}`;
   const borderColorClass = `border-${color}`;
 
   return (
     <div
       className={`
-        px-2 py-0.5 rounded-[24px]
-        border-[2px] ${borderColorClass}
+        w-fit
+        px-3 py-0.5 rounded-full
+        border-2 ${borderColorClass}
         neon ${neonColorClass}
       `}
     >
       <span
         className={`
-          text-primary font-bold 
+          text-primary font-bold
           text-sm lg:text-[14px] xl:text-[17px]
         `}
       >
-        {name}
+        {text}
       </span>
     </div>
   );

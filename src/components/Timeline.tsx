@@ -33,9 +33,11 @@ export default function Timeline() {
     <div 
       ref={timelineRef}
       className="
-        w-full h-[400px] relative overflow-x-auto 
+        w-full h-[300px] lg:h-[400px] relative overflow-x-auto 
         cursor-grab active:cursor-grabbing
         scrollbar-none [&::-webkit-scrollbar]:hidden
+        ml-[-16px] lg:ml-[-24px] px-4 lg:px-6
+        select-none
       "
       onMouseDown={onMouseDown}
       onMouseLeave={onMouseLeaveOrUp}
@@ -43,15 +45,15 @@ export default function Timeline() {
       onMouseMove={onMouseMove}
     >
       <div className="relative flex items-center h-full">
-        <div className="relative flex justify-start gap-[200px] px-48">
+        <div className="relative flex justify-start gap-[150px] lg:gap-[200px] px-32 lg:px-48">
           
           <div className="absolute top-1/2 left-0 h-1 w-full -translate-y-1/2 bg-primary" />
           
           {experienceData.map((exp, index) => {
             const isEven = index % 2 === 0;
             const positionClass = isEven 
-              ? 'bottom-full mb-9' 
-              : 'top-full mt-9';
+              ? 'bottom-full mb-6 lg:mb-9' 
+              : 'top-full mt-6 lg:mt-9';
 
             return (
               <div 

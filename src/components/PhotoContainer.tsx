@@ -10,16 +10,17 @@ export default function PhotoContainer() {
         rounded-[36px]
         max-w-[362px]
         max-h-[419px]
+        flex-shrink-0
       "
     >
       <Image
         src="/profilepicture.png"
         alt="Zdjęcie profilowe Patryk Klimek"
-        className="object-cover"
+        className="object-cover rounded-[36px]"
         width={300}
         height={300}
       />
-      <p className="text-[35px] font-bold text-primary">
+      <p className="font-bold text-primary sm:text-[29px] lg:text-[35px] ">
         Patryk Klimek
       </p>
     </div>

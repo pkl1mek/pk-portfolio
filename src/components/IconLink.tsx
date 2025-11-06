@@ -15,6 +15,7 @@ export default function IconLink({ href, iconName, ariaLabel }: IconLinkProps) {
       aria-label={ariaLabel}
       className="
         w-9 h-9
+        lg:w-12 lg:h-12
         flex items-center justify-center
         transition-all duration-300
         hover:neon hover:neon-green
