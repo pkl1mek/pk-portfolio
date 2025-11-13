@@ -13,7 +13,7 @@ export default function ProjectTag({ text, color }: ProjectTagProps) {
     <div
       className={`
         w-fit
-        px-3 py-0.5 rounded-full
+        px-3 py-0 rounded-full
         border-2 ${borderColorClass}
         neon ${neonColorClass}
       `}
@@ -21,7 +21,7 @@ export default function ProjectTag({ text, color }: ProjectTagProps) {
       <span
         className={`
           text-primary font-bold
-          text-sm lg:text-[14px] xl:text-[17px]
+          sm:text-[14px] lg:text-[14px] xl:text-[17px]
         `}
       >
         {text}

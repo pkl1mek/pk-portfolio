@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 import './globals.css';
 
 const satoshi = localFont({
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main>{children}</main>
         </div>
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );

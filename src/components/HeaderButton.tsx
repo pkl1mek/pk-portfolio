@@ -1,21 +1,39 @@
-import Link from 'next/link';
+"use client";
+
+import { Link as ScrollLink } from 'react-scroll';
 import React from 'react';
 
 interface HeaderButtonProps {
   href: string;
   text: string;
+  onClick?: () => void;
 }
 
-export default function HeaderButton({ href, text }: HeaderButtonProps) {
+export default function HeaderButton({ href, text, onClick }: HeaderButtonProps) {
+  
+  if (!href.startsWith('#')) {
+    return (
+      <a href={href} className="... (klasy dla zwykłego linku, jeśli potrzebujesz)">
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
+    <ScrollLink
+      to={href.substring(1)}
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-100}
+      onClick={onClick}
       className="
         group relative inline-block py-2
         font-bold text-primary
         transition-colors duration-300
         hover:neon hover:neon-green
         text-2xl  xl:text-[29px]
+        cursor-pointer
       "
     >
       {text}
@@ -28,6 +46,6 @@ export default function HeaderButton({ href, text }: HeaderButtonProps) {
           bg-white neon neon-green
         "
       />
-    </Link>
+    </ScrollLink>
   );
 }

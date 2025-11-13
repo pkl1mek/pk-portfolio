@@ -54,7 +54,7 @@ export default function Header() {
             <HeaderButton href="#kontakt" text="kontakt" />
           </li>
           <li>
-            <HeaderButton href="/en" text="english" />
+            <HeaderButton href="#english" text="english" />
           </li>
         </ul>
 
@@ -70,7 +70,7 @@ export default function Header() {
       {(isMenuOpen || animationClass) && (
         <div 
           className={`
-            fixed top-0 right-0 h-full w-full py-14
+            fixed top-0 right-0 h-full w-full
             flex flex-col items-start
             bg-[#2C2F37]
             p-6 lg:hidden
@@ -80,22 +80,22 @@ export default function Header() {
           `}
         >
           <div className="w-full flex items-center justify-between mb-12">
-            <h2 className="text-4xl font-bold text-primary">Menu</h2>
+            <h2 className="text-3xl font-bold text-primary">Menu</h2>
           </div>
 
           <div className="flex flex-col items-start gap-8 pl-4">
             <ul className="flex flex-col items-start gap-8">
-              <li onClick={handleLinkClick}>
-                <HeaderButton href="#o-mnie" text="o mnie" />
+              <li>
+                <HeaderButton href="#o-mnie" text="o mnie" onClick={handleLinkClick} />
+              </li>
+              <li>
+                <HeaderButton href="#portfolio" text="portfolio" onClick={handleLinkClick} />
+              </li>
+              <li>
+                <HeaderButton href="#kontakt" text="kontakt" onClick={handleLinkClick} />
               </li>
               <li onClick={handleLinkClick}>
-                <HeaderButton href="#portfolio" text="portfolio" />
-              </li>
-              <li onClick={handleLinkClick}>
-                <HeaderButton href="#kontakt" text="kontakt" />
-              </li>
-              <li onClick={handleLinkClick}>
-                <HeaderButton href="/en" text="english" />
+                <HeaderButton href="#english" text="english" />
               </li>
             </ul>
 

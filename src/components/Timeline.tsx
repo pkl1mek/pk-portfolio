@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 import experienceData from '@/data/experience.json';
 import FirmContainer from './FirmContainer';
+import { motion } from 'framer-motion';
 
 export default function Timeline() {
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -29,11 +30,23 @@ export default function Timeline() {
     timelineRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const dotsContainerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+
   return (
     <div 
       ref={timelineRef}
       className="
-        w-full h-[300px] lg:h-[400px] relative overflow-x-auto 
+        w-full h-[300px] lg:h-[360px] relative overflow-x-auto 
         cursor-grab active:cursor-grabbing
         scrollbar-none [&::-webkit-scrollbar]:hidden
         ml-[-16px] lg:ml-[-24px] px-4 lg:px-6
@@ -45,9 +58,21 @@ export default function Timeline() {
       onMouseMove={onMouseMove}
     >
       <div className="relative flex items-center h-full">
-        <div className="relative flex justify-start gap-[150px] lg:gap-[200px] px-32 lg:px-48">
+        <motion.div 
+          className="relative flex justify-start gap-[150px] lg:gap-[200px] px-32 lg:px-48"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={dotsContainerVariants}
+        >
           
-          <div className="absolute top-1/2 left-0 h-1 w-full -translate-y-1/2 bg-primary" />
+          <motion.div 
+            className="absolute top-1/2 left-0 h-1 -translate-y-1/2 bg-primary origin-left"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.5, ease: [0.32, 0.72, 0, 1] }}
+            style={{ width: '100%' }}
+          />
           
           {experienceData.map((exp, index) => {
             const isEven = index % 2 === 0;
@@ -56,7 +81,7 @@ export default function Timeline() {
               : 'top-full mt-6 lg:mt-9';
 
             return (
-              <div 
+              <motion.div 
                 key={index} 
                 className="relative z-10 flex-shrink-0"
               >
@@ -72,12 +97,13 @@ export default function Timeline() {
                     logoAlt={exp.logoAlt}
                     jobTitle={exp.jobTitle}
                     workDuration={exp.workDuration}
+                    link={exp.link}
                   />
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

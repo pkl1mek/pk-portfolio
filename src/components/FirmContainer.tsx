@@ -6,16 +6,21 @@ interface FirmContainerProps {
   logoAlt: string;
   jobTitle: string;
   workDuration: string;
+  link: string;
 }
 
 export default function FirmContainer({ 
   logoSrc, 
   logoAlt, 
   jobTitle, 
-  workDuration 
+  workDuration,
+  link
 }: FirmContainerProps) {
   return (
-    <div 
+    <a 
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className="
         glass 
         flex items-center 
@@ -23,6 +28,7 @@ export default function FirmContainer({
         px-3 lg:px-4 py-2 
         rounded-[36px]
         h-auto lg:h-20
+        transition-transform duration-200 hover:scale-105
       "
     >
       <Image
@@ -32,7 +38,7 @@ export default function FirmContainer({
         height={60}
         className="
           w-12 h-12 lg:w-[60px] lg:h-[60px] 
-          rounded-2xl  object-cover
+          rounded-full  object-cover
         "
       />
       <div className="flex flex-col gap-1 lg:gap-2.5">
@@ -43,6 +49,6 @@ export default function FirmContainer({
           {workDuration}
         </p>
       </div>
-    </div>
+    </a>
   );
 }

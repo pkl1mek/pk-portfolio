@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion'; // Import motion
 
 export default function ProjectScroller({ children }: { children: React.ReactNode }) {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -27,8 +28,19 @@ export default function ProjectScroller({ children }: { children: React.ReactNod
     scrollerRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, 
+        delayChildren: 0.3 
+      }
+    }
+  };
+
   return (
-    <div 
+    <motion.div 
       ref={scrollerRef}
       className="
         grid grid-cols-1 gap-8
@@ -38,12 +50,12 @@ export default function ProjectScroller({ children }: { children: React.ReactNod
         scrollbar-none [&::-webkit-scrollbar]:hidden
         select-none
       "
-      onMouseDown={onMouseDown}
-      onMouseLeave={onMouseLeaveOrUp}
-      onMouseUp={onMouseLeaveOrUp}
-      onMouseMove={onMouseMove}
+      variants={containerVariants} 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }} 
     >
       {children}
-    </div>
+    </motion.div>
   );
 }

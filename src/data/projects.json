@@ -2,25 +2,9 @@
   {
     "type": "Strona Webowa",
     "color": "blue",
-    "title": "Projekt graficzny dla Meble na Wymiar Adrian Gadawski",
+    "title": "Strona internetowa dla RehaMedica",
     "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
-    "imageUrl": "/profilepicture.png",
-    "projectUrl": "#"
-  },
-  {
-    "type": "Strona Webowa",
-    "color": "blue",
-    "title": "Projekt graficzny dla Meble na Wymiar Adrian Gadawski",
-    "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
-    "imageUrl": "/profilepicture.png",
-    "projectUrl": "#"
-  },
-  {
-    "type": "Strona Webowa",
-    "color": "blue",
-    "title": "Projekt graficzny dla Meble na Wymiar Adrian Gadawski",
-    "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
-    "imageUrl": "/profilepicture.png",
+    "imageUrl": "/rehamedica.png",
     "projectUrl": "#"
   }
 ]

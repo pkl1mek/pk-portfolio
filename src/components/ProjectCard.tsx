@@ -1,55 +1,143 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ProjectTag from './ProjectTag';
-import Button from './Button';
+import { FaEye, FaTimes } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 interface ProjectCardProps {
   type: string;
   color: string;
-  title: string;
   imageUrl: string;
-  projectUrl: string;
 }
 
 export default function ProjectCard({
   type,
   color,
-  title,
   imageUrl,
-  projectUrl
 }: ProjectCardProps) {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
+  useEffect(() => {
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+
+    if (isImageOpen) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = originalBodyOverflow;
+      document.documentElement.style.overflow = originalHtmlOverflow;
+    }
+    
+    return () => {
+      document.body.style.overflow = originalBodyOverflow;
+      document.documentElement.style.overflow = originalHtmlOverflow;
+    };
+  }, [isImageOpen]);
+
+  const openImageOverlay = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsImageOpen(true);
+  };
+
+  const closeImageOverlay = () => {
+    setIsImageOpen(false);
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 }
+  };
+
   return (
-    <div
-      className="
-        glass
-        flex flex-col gap-2.5
-        px-6 py-4 rounded-[36px]
-        w-full lg:w-[500px]
-        flex-shrink-0
-      "
-    >
-      <ProjectTag text={type} color={color} />
-      
-      <h3 className="font-bold text-primary mt-1 text-[29px] lg:text-[24px] xl:text-[35px]">
-        {title}
-      </h3>
-      
-      <div className="relative w-full h-64 rounded-[12px] overflow-hidden my-4">
+    <>
+      <motion.div
+        className="
+          relative
+          rounded-[36px] sm:rounded-[24px]
+          w-full
+          aspect-video
+          lg:aspect-auto
+          lg:w-[600px]
+          lg:h-[300px]
+          xl:h-[400px]
+          xl:w-[800px]
+          flex-shrink-0
+          cursor-pointer
+          transition-transform duration-300 ease-in-out
+          overflow-hidden
+          shadow-[0_4px_30px_rgba(0,0,0,0.1)]
+        "
+        variants={itemVariants}
+        transition={{ duration: 0.5, ease: "easeIn" }}
+      >
         <Image
           src={imageUrl}
-          alt={title}
+          alt={type}
           fill
           className="object-cover"
         />
-      </div>
-      
-      <a href={projectUrl} target="_blank" rel="noopener noreferrer" className="block">
-        <Button
-          content="Zobacz projekt"
-          iconName="certificates.svg" 
-          radius={36}
-        />
-      </a>
-    </div>
+        <div 
+          className="
+            absolute inset-0 
+            flex flex-col justify-between 
+            sm:p-2 md:p-4
+            bg-gradient-to-t from-black/60 to-transparent
+          "
+        >
+          <ProjectTag text={type} color={color} />
+          <button 
+            onClick={openImageOverlay}
+            className="
+              self-end 
+              w-9 h-9 md:w-12 md:h-12
+              rounded-full 
+              glass bg-glass-gradient
+              flex items-center justify-center
+              text-primary neon neon-primary
+              hover:scale-110 transition-transform
+            "
+            aria-label="Powiększ obraz"
+          >
+            <FaEye size={24} />
+          </button>
+        </div>
+      </motion.div>
+
+      {isImageOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={closeImageOverlay}
+        >
+          <button
+            onClick={closeImageOverlay}
+            className="absolute top-6 right-6 text-white text-4xl hover:neon hover:neon-green transition-colors"
+            aria-label="Zamknij"
+          >
+            <FaTimes />
+          </button>
+
+          <div
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={imageUrl}
+              alt={type}
+              width={1920}
+              height={1080}
+              className="
+                object-contain w-auto h-auto 
+                max-w-[calc(100vw-2.5rem)]
+                max-h-[85vh]
+                lg:max-h-[90vh]
+              "
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }

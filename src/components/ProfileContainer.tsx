@@ -1,6 +1,6 @@
 import PhotoContainer from './PhotoContainer';
 import IconLink from './IconLink';
-import Button from './Button';
+import Image from 'next/image';
 
 export default function ProfileContainer() {
   return (
@@ -37,11 +37,31 @@ export default function ProfileContainer() {
         />
       </div>
 
-      <Button
-        content="Certyfikaty"
-        iconName="certificates.svg"
-        radius={36}
-      />
+      <a
+        href="/certificates.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`
+          w-full
+          flex items-center justify-center
+          gap-2.5 
+          px-6 py-2 
+          font-bold text-primary
+          text-[20px] lg:text-sm xl:text-2xl
+          glass bg-glass-gradient
+          transition-transform duration-200 hover:scale-105
+          rounded-[36px]
+        `}
+      >
+        <Image
+          src="/icons/certificates.svg"
+          alt="Certyfikaty"
+          width={24} 
+          height={24}
+          className="object-contain"
+        />
+        <span>Certyfikaty</span>
+      </a>
     </div>
   );
 }

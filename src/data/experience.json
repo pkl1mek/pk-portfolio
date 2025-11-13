@@ -1,38 +1,16 @@
 [
   {
-    "logoSrc": "/discurso.png",
+    "logoSrc": "/aiut.webp",
     "logoAlt": "AIUT",
     "jobTitle": "Pracownik działu produkcji",
-    "workDuration": "lipiec-wrzesień 2024"
+    "workDuration": "lipiec-październik 2024",
+    "link": "https://aiut.com.pl"
   },
   {
     "logoSrc": "/discurso.png",
     "logoAlt": "Discurso.ai",
-    "jobTitle": "Frontend Developer Intern",
-    "workDuration": "czerwiec 2025 - obecnie"
-  },
-  {
-    "logoSrc": "/discurso.png",
-    "logoAlt": "AIUT",
-    "jobTitle": "Pracownik działu produkcji",
-    "workDuration": "lipiec-wrzesień 2024"
-  },
-  {
-    "logoSrc": "/discurso.png",
-    "logoAlt": "Discurso.ai",
-    "jobTitle": "Frontend Developer Intern",
-    "workDuration": "czerwiec 2025 - obecnie"
-  },
-  {
-    "logoSrc": "/discurso.png",
-    "logoAlt": "AIUT",
-    "jobTitle": "Pracownik działu produkcji",
-    "workDuration": "lipiec-wrzesień 2024"
-  },
-  {
-    "logoSrc": "/discurso.png",
-    "logoAlt": "Discurso.ai",
-    "jobTitle": "Frontend Developer Intern",
-    "workDuration": "czerwiec 2025 - obecnie"
+    "jobTitle": "Front-end Developer Intern",
+    "workDuration": "czerwiec-listopad 2025",
+    "link": "https://discurso.ai"
   }
 ]

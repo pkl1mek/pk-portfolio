@@ -5,7 +5,7 @@ import IconLink from './IconLink';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#2C2F37] py-9">
+    <footer className="w-full bg-[#2C2F37] py-9 mt-24">
       <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 xl:px-0">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 h-full lg:max-w-1/2">
