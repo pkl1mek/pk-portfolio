@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Patryk Klimek - Personal Portfolio
 
-## Getting Started
+Welcome to the source code for my personal portfolio. This project was built from scratch to showcase my skills in modern web development, UI/UX design, and interactive animations.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ## 🚀 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Modern Tech Stack:** Built with **Next.js 14** (App Router) and **TypeScript** for a robust, performant, and type-safe application.
+* **Responsive Design:** Fully responsive layout for all screen sizes, from mobile to ultra-wide desktops, using a custom **Tailwind CSS** configuration.
+* **Interactive Animations:** Smooth, stateful animations across the site powered by **Framer Motion**, including:
+    * Staggered, on-scroll reveal animations for all sections.
+    * A draggable "drag-to-scroll" timeline for work experience.
+    * A "pop-out" image overlay for the portfolio section.
+* **Custom UI Components:** All components, including buttons, cards, and modals, are custom-built.
+* **Dynamic i18n:** Features a lightweight, custom React Context hook for seamless **EN/PL language toggling** without a full page reload.
+* **Custom Design System:** Implements a unique design system in `tailwind.config.js` featuring:
+    * Custom, responsive font scaling.
+    * A reusable `glassmorphism` plugin.
+    * A dynamic `neon` effect plugin that works with the site's color palette.
+* **Data-Driven Content:** All text-based content (skills, project info, experience) is loaded from local JSON files and integrated with the translation system.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ## 💻 Tech Stack
 
-## Learn More
+* **Framework:** Next.js
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animation:** Framer Motion
+* **Deployment:** Vercel (or your host)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ## ✉️ Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Patryk Klimek** - [pk.pklimek@gmail.com](mailto:pk.pklimek@gmail.com)
+* **LinkedIn** - [https://www.linkedin.com/in/patryk-klimek-215993362]([https://linkedin.com/in/twoj-profil](https://www.linkedin.com/in/patryk-klimek-215993362))
