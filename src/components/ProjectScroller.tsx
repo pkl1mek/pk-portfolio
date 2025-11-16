@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion'; // Import motion
+import { motion } from 'framer-motion'; 
 
 export default function ProjectScroller({ children }: { children: React.ReactNode }) {
   const scrollerRef = useRef<HTMLDivElement>(null);

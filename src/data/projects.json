@@ -1,6 +1,6 @@
 [
   {
-    "type": "Strona Webowa",
+    "typeKey": "project_type_web",
     "color": "blue",
     "title": "Strona internetowa dla RehaMedica",
     "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",

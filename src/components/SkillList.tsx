@@ -5,6 +5,7 @@ import Image from 'next/image';
 import skillsData from '@/data/skills.json';
 import SkillItem from './SkillItem';
 import { motion, LayoutGroup, AnimatePresence } from 'framer-motion';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const skillsInFirstRow = 5;
 
@@ -15,6 +16,7 @@ const getShuffledSkills = () => {
 
 export default function SkillList() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations('Skills');
   
   const [initialSkills, setInitialSkills] = useState(
     skillsData.slice(0, skillsInFirstRow)
@@ -38,21 +40,20 @@ export default function SkillList() {
       <motion.div 
         className="flex flex-wrap items-end gap-2.5"
         layout
-        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
       >
         <AnimatePresence>
           {skillsToShow.map((skill, index) => (
             <motion.div
-              key={skill.name}
+              key={skill.key}
               variants={itemVariants}
               initial="hidden"
               animate="visible"
-              exit="exit"
               transition={{ duration: 0.3, delay: index * 0.05, ease: "easeIn" }}
-              className="will-change-transform"
+              layout
             >
               <SkillItem 
-                name={skill.name} 
+                name={t(skill.key)} 
                 color={skill.color} 
               />
             </motion.div>

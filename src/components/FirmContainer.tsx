@@ -1,21 +1,26 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface FirmContainerProps {
   logoSrc: string;
   logoAlt: string;
-  jobTitle: string;
-  workDuration: string;
+  jobTitleKey: string;
+  workDurationKey: string;
   link: string;
 }
 
 export default function FirmContainer({ 
   logoSrc, 
   logoAlt, 
-  jobTitle, 
-  workDuration,
+  jobTitleKey, 
+  workDurationKey,
   link
 }: FirmContainerProps) {
+  const t = useTranslations('Experience');
+
   return (
     <a 
       href={link}
@@ -42,11 +47,11 @@ export default function FirmContainer({
         "
       />
       <div className="flex flex-col gap-1 lg:gap-2.5">
-        <p className="font-bold text-primary whitespace-nowrap text-[17px] lg:text-[17px] xl:text-[20px]">
-          {jobTitle}
+        <p className="font-bold text-primary whitespace-nowrap text-[17px] lg:text-[20px]">
+          {t(jobTitleKey)}
         </p>
-        <p className="font-medium text-primary neon neon-green whitespace-nowrap text-sm lg:text-[14px] xl:text-[17px]">
-          {workDuration}
+        <p className="font-medium text-primary neon neon-green whitespace-nowrap text-[14px] lg:text-[17px]">
+          {t(workDurationKey)}
         </p>
       </div>
     </a>

@@ -1,14 +1,9 @@
 [
-  { "name": "React", "color": "yellow" },
-  { "name": "Next.js", "color": "yellow" },
-  { "name": "Tailwind CSS", "color": "yellow" },
-  { "name": "TypeScript", "color": "yellow" },
-  { "name": "JavaScript", "color": "yellow" },
-  { "name": "Figma", "color": "purple" },
-  { "name": "VS Code", "color": "purple" },
-  { "name": "Git", "color": "yellow" },
-  { "name": "HTML5", "color": "yellow" },
-  { "name": "CSS3", "color": "yellow" },
-  { "name": "Praca zespołowa", "color": "blue" },
-  { "name": "Angielski", "color": "blue" }
+  { "key": "react", "color": "blue" },
+  { "key": "nextjs", "color": "primary" },
+  { "key": "tailwind", "color": "green" },
+  { "key": "typescript", "color": "blue" },
+  { "key": "javascript", "color": "yellow" },
+  { "key": "figma", "color": "purple" },
+  { "key": "nodejs", "color": "green" }
 ]

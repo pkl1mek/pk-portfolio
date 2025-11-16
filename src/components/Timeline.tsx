@@ -41,6 +41,11 @@ export default function Timeline() {
     },
   };
 
+  const dotVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
 
   return (
     <div 
@@ -84,6 +89,8 @@ export default function Timeline() {
               <motion.div 
                 key={index} 
                 className="relative z-10 flex-shrink-0"
+                variants={dotVariants}
+                transition={{ duration: 0.4, ease: "easeIn" }}
               >
                 <div className="w-6 h-6 rounded-full bg-primary" />
 
@@ -95,8 +102,8 @@ export default function Timeline() {
                   <FirmContainer 
                     logoSrc={exp.logoSrc}
                     logoAlt={exp.logoAlt}
-                    jobTitle={exp.jobTitle}
-                    workDuration={exp.workDuration}
+                    jobTitleKey={exp.jobTitleKey}
+                    workDurationKey={exp.workDurationKey}
                     link={exp.link}
                   />
                 </div>

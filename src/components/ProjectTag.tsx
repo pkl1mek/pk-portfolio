@@ -1,11 +1,15 @@
+"use client";
+
 import React from 'react';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface ProjectTagProps {
-  text: string;
+  textKey: string;
   color: string;
 }
 
-export default function ProjectTag({ text, color }: ProjectTagProps) {
+export default function ProjectTag({ textKey, color }: ProjectTagProps) {
+  const t = useTranslations('Projects');
   const neonColorClass = `neon-${color}`;
   const borderColorClass = `border-${color}`;
 
@@ -24,7 +28,7 @@ export default function ProjectTag({ text, color }: ProjectTagProps) {
           sm:text-[14px] lg:text-[14px] xl:text-[17px]
         `}
       >
-        {text}
+        {t(textKey)}
       </span>
     </div>
   );

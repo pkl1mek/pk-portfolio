@@ -1,0 +1,60 @@
+{
+  "Header": {
+    "o-mnie": "about me",
+    "portfolio": "portfolio",
+    "kontakt": "contact",
+    "toggle": "polski"
+  },
+  "HomePage": {
+    "h1_1": "Creating modern",
+    "h1_2": "Websites \nBranding & Design",
+    "p": "I combine aesthetics with functionality",
+    "aboutTitle": "About Me",
+    "servicesTitle": "What I do",
+    "portfolioTitle": "Portfolio"
+  },
+  "InfoContainer": {
+    "title": "Description",
+    "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse amet in blandit turpis gravida massa neque magna volutpat. Elit leo nulla arcu risus semper lacus.",
+    "educationTitle": "Education",
+    "educationText": "AGH University of Science and Technology in Krakow",
+    "skillsTitle": "Skills",
+    "experienceTitle": "Experience"
+  },
+  "ProfileContainer": {
+    "certificatesButton": "Certificates"
+  },
+  "Skills": {
+    "react": "React",
+    "nextjs": "Next.js",
+    "tailwind": "Tailwind CSS",
+    "typescript": "TypeScript",
+    "javascript": "JavaScript (ES6+)",
+    "figma": "Figma",
+    "nodejs": "Node.js"
+  },
+  "Experience": {
+    "job_aiut_title": "Production Department Employee",
+    "job_aiut_duration": "July-October 2024",
+    "job_discurso_title": "Front-end Developer Intern",
+    "job_discurso_duration": "June-November 2025"
+  },
+  "Services": {
+    "service1_title": "Branding & Design",
+    "service1_desc": "I create unique visual identities that make brands stand out in the market.",
+    "service2_title": "Websites",
+    "service2_desc": "I build fast, responsive, and optimized websites in Next.js.",
+    "service3_title": "UX/UI Consultations",
+    "service3_desc": "I analyze and design intuitive interfaces, focusing on user experience."
+  },
+  "Footer": {
+    "description": "Lorem ipsum dolor sit amet consectetur. Tristique nec elementum amet cras egestas eget libero cras tempus. Sagittis pulvinar etiam hac hendrerit. Amet vestibulum orci velit diam. Non pellentesque maecenas ullamcorper vestibulum.",
+    "contactTitle": "Contact",
+    "projectsTitle": "Projects / Commissions",
+    "privateTitle": "Private"
+  },
+  "Projects": {
+    "project_type_web": "Web Page",
+    "project_type_design": "Graphic Design"
+  }
+}

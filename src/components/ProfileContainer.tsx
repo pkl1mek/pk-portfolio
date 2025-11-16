@@ -1,8 +1,13 @@
+"use client";
+
 import PhotoContainer from './PhotoContainer';
 import IconLink from './IconLink';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function ProfileContainer() {
+  const t = useTranslations('ProfileContainer');
+
   return (
     <div
       className="
@@ -47,7 +52,7 @@ export default function ProfileContainer() {
           gap-2.5 
           px-6 py-2 
           font-bold text-primary
-          text-[20px] lg:text-sm xl:text-2xl
+          text-[20px] xl:text-2xl
           glass bg-glass-gradient
           transition-transform duration-200 hover:scale-105
           rounded-[36px]
@@ -60,7 +65,7 @@ export default function ProfileContainer() {
           height={24}
           className="object-contain"
         />
-        <span>Certyfikaty</span>
+        <span>{t('certificatesButton')}</span>
       </a>
     </div>
   );

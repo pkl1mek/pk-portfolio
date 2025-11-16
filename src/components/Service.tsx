@@ -1,14 +1,19 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface ServiceProps {
   iconName: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
-export default function Service({ iconName, title, description }: ServiceProps) {
+export default function Service({ iconName, titleKey, descriptionKey }: ServiceProps) {
+  const t = useTranslations('Services');
+  
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
@@ -31,17 +36,17 @@ export default function Service({ iconName, title, description }: ServiceProps) 
       >
         <Image
           src={`/icons/${iconName}`}
-          alt={`${title} icon`}
+          alt={`${t(titleKey)} icon`}
           width={24}
           height={24}
           className="object-contain neon neon-green"
         />
       </div>
       <h3 className="font-bold text-primary text-[29px]  xl:text-[35px]">
-        {title}
+        {t(titleKey)}
       </h3>
       <p className="font-normal text-primary/80 text-[20px]  xl:text-[24px]">
-        {description}
+        {t(descriptionKey)}
       </p>
     </motion.div>
   );

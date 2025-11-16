@@ -21,7 +21,7 @@ export default function SkillItem({ name, color }: SkillItemProps) {
       <span
         className={`
           text-primary font-bold 
-          text-sm lg:text-xs xl:text-[17px]
+          text-[17px]
         `}
       >
         {name}

@@ -1,11 +1,16 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import IconLink from './IconLink';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+
   return (
-    <footer className="w-full bg-[#2C2F37] py-9 mt-24">
+    <footer id="contact" className="w-full bg-[#2C2F37] py-9 mt-24">
       <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16 xl:px-0">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:items-stretch">
           <div className="flex flex-col justify-between gap-8 h-full lg:max-w-1/2">
@@ -21,7 +26,7 @@ export default function Footer() {
             </Link>
 
             <p className="font-normal text-primary text-[20px] lg:text-[17px] xl:text-[24px]">
-              Lorem ipsum dolor sit amet consectetur. Tristique nec elementum amet cras egestas eget libero cras tempus. Sagittis pulvinar etiam hac hendrerit. Amet vestibulum orci velit diam. Non pellentesque maecenas ullamcorper vestibulum.
+              {t('description')}
             </p>
 
             <div className="flex items-center gap-6">
@@ -49,12 +54,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-col justify-between gap-8 h-full">
             <h3 className="font-bold text-primary text-[24px] lg:text-[24px] xl:text-[29px]">
-              Kontakt
+              {t('contactTitle')}
             </h3>
 
             <div className="flex flex-col gap-2.5">
               <h4 className="font-bold text-primary text-[20px] lg:text-[17px] xl:text-[24px]">
-                Projekty / Zlecenia
+                {t('projectsTitle')}
               </h4>
               <a href="mailto:projekty@example.com" className="flex items-center gap-2.5 text-primary/80 transition-colors hover:neon hover:neon-green">
                 <Image src="/icons/mail.svg" alt="Email" width={24} height={24} />
@@ -72,7 +77,7 @@ export default function Footer() {
 
             <div className="flex flex-col gap-2.5">
               <h4 className="font-bold text-primary text-[20px] lg:text-[17px] xl:text-[24px]">
-                Prywatny
+                {t('privateTitle')}
               </h4>
               <a href="mailto:prywatny@example.com" className="flex items-center gap-2.5 text-primary/80 transition-colors hover:neon hover:neon-green">
                 <Image src="/icons/mail.svg" alt="Email" width={24} height={24} />

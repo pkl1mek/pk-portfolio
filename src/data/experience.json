@@ -2,15 +2,15 @@
   {
     "logoSrc": "/aiut.webp",
     "logoAlt": "AIUT",
-    "jobTitle": "Pracownik działu produkcji",
-    "workDuration": "lipiec-październik 2024",
+    "jobTitleKey": "job_aiut_title",
+    "workDurationKey": "job_aiut_duration",
     "link": "https://aiut.com.pl"
   },
   {
     "logoSrc": "/discurso.png",
     "logoAlt": "Discurso.ai",
-    "jobTitle": "Front-end Developer Intern",
-    "workDuration": "czerwiec-listopad 2025",
+    "jobTitleKey": "job_discurso_title",
+    "workDurationKey": "job_discurso_duration",
     "link": "https://discurso.ai"
   }
 ]

@@ -87,7 +87,7 @@ export default function ProjectCard({
             bg-gradient-to-t from-black/60 to-transparent
           "
         >
-          <ProjectTag text={type} color={color} />
+          <ProjectTag textKey={type} color={color} />
           <button 
             onClick={openImageOverlay}
             className="
@@ -132,7 +132,10 @@ export default function ProjectCard({
                 object-contain w-auto h-auto 
                 max-w-[calc(100vw-2.5rem)]
                 max-h-[85vh]
-                lg:max-h-[90vh]
+                lg:w-[50vw]
+                lg:h-[75vh]
+                lg:max-w-none
+                lg:max-h-none
               "
             />
           </div>

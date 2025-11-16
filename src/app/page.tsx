@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import ProfileContainer from '@/components/ProfileContainer';
 import InfoContainer from '@/components/InfoContainer';
 import Service from '@/components/Service';
@@ -9,8 +10,13 @@ import projectsData from '@/data/projects.json';
 import ProjectScroller from '@/components/ProjectScroller';
 import { motion, LayoutGroup } from 'framer-motion';
 import AnimatedUnderline from '@/components/AnimatedUnderline';
+import { useTranslations } from '@/hooks/useTranslations';
+
+export type Project = (typeof projectsData)[0];
 
 export default function HomePage() {
+  const t = useTranslations('HomePage');
+
   const heroContainerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -52,7 +58,7 @@ export default function HomePage() {
         <motion.div
           className="
           w-full flex flex-col lg:flex-row
-          items-center lg:items-start
+          items-start
           justify-between
           gap-12 py-12 lg:py-20
         "
@@ -62,26 +68,22 @@ export default function HomePage() {
         >
           <div className="flex flex-col gap-6 text-start">
             <motion.h1 
-              className="sm:text-[41px] lg:text-[50px] xl:text-[72px] font-black text-primary leading-tight"
+              className="sm:text-[41px] lg:text-[50px] xl:text-[72px] font-black text-primary leading-tight whitespace-pre-line"
               variants={heroItemVariants}
             >
-              Tworzenie
-              <br />
-              nowoczesnych
+              {t('h1_1')}
             </motion.h1>
             <motion.h1 
-              className="sm:text-[41px] lg:text-[50px] xl:text-[72px] font-bold text-primary neon neon-green leading-tight"
+              className="sm:text-[41px] lg:text-[50px] xl:text-[72px] font-bold text-primary neon neon-green leading-tight whitespace-pre-line will-change-transform"
               variants={heroItemVariants}
             >
-              Stron Webowych
-              <br />
-              Branding & Design
+              {t('h1_2')}
             </motion.h1>
             <motion.p 
-              className="sm:text-[35px] lg:text-[29px] xl:text-[41px] font-light text-primary"
+              className="sm:text-[35px]  xl:text-[41px] font-light text-primary"
               variants={heroItemVariants}
             >
-              Łączę estetykę z funkcjonalnością
+              {t('p')}
             </motion.p>
           </div>
           <motion.img
@@ -100,7 +102,7 @@ export default function HomePage() {
         </motion.div>
 
         <motion.section 
-          id="o-mnie" 
+          id="about-me" 
           className="w-full mt-25 text-start py-12"
           initial="hidden"
           whileInView="visible"
@@ -108,7 +110,7 @@ export default function HomePage() {
           variants={sectionVariants}
         >
           <h2 className="relative inline-block sm:text-[35px] lg:text-[35px] xl:text-[50px] font-black text-primary">
-            Kim jestem
+            {t('aboutTitle')}
             <AnimatedUnderline />
           </h2>
           <div className="mt-20 flex flex-col lg:flex-row gap-16 lg:items-stretch">
@@ -118,7 +120,7 @@ export default function HomePage() {
         </motion.section>
         
         <motion.section 
-          id="uslugi" 
+          id="services" 
           className="w-full py-12 text-start"
           initial="hidden"
           whileInView="visible"
@@ -126,7 +128,7 @@ export default function HomePage() {
           variants={sectionVariants}
         >
           <h2 className="relative inline-block sm:text-[35px] lg:text-[35px] xl:text-[50px] font-black text-primary">
-            Czym się zajmuję
+            {t('servicesTitle')}
             <AnimatedUnderline />
           </h2>
           <motion.div 
@@ -138,10 +140,10 @@ export default function HomePage() {
           >
             {servicesData.map((service) => (
               <Service
-                key={service.title}
+                key={service.titleKey}
                 iconName={service.iconName}
-                title={service.title}
-                description={service.description}
+                titleKey={service.titleKey}
+                descriptionKey={service.descriptionKey}
               />
             ))}
           </motion.div>
@@ -156,7 +158,7 @@ export default function HomePage() {
           variants={sectionVariants}
         >
           <h2 className="relative inline-block sm:text-[35px] lg:text-[35px] xl:text-[50px] font-black text-primary">
-            Portfolio
+            {t('portfolioTitle')}
             <AnimatedUnderline />
           </h2>
           <div className="mt-20">
@@ -164,7 +166,7 @@ export default function HomePage() {
               {projectsData.map((project) => (
                 <ProjectCard
                   key={project.title}
-                  type={project.type}
+                  type={project.typeKey}
                   color={project.color}
                   imageUrl={project.imageUrl}
                 />

@@ -1,8 +1,11 @@
 import SkillList from './SkillList';
 import Timeline from './Timeline';
 import { motion } from 'framer-motion';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function InfoContainer() {
+  const t = useTranslations('InfoContainer');
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -22,13 +25,11 @@ export default function InfoContainer() {
         viewport={{ once: true, amount: 0.5 }}
         variants={itemVariants}
       >
-        <h3 className="font-bold text-[29px] lg:text-[29px] xl:text-[35px]">
-          Opis
+        <h3 className="font-bold text-[29px]  xl:text-[35px]">
+          {t('title')}
         </h3>
-        <p className="font-normal text-primary/80 text-[20px] lg:text-[20px] xl:text-[24px]">
-          Lorem ipsum dolor sit amet consectetur. Suspendisse amet in blandit
-          turpis gravida massa neque magna volutpat. Elit leo nulla arcu risus
-          semper lacus.
+        <p className="font-normal text-primary/80 text-[20px]  xl:text-[24px]">
+          {t('description')}
         </p>
       </motion.div>
 
@@ -40,16 +41,16 @@ export default function InfoContainer() {
         variants={itemVariants}
       >
         <div className="w-full lg:w-1/2 flex flex-col gap-2.5">
-          <h3 className="font-bold text-[29px] lg:text-[29px] xl:text-[35px]">
-            Wykształcenie
+          <h3 className="font-bold text-[29px]  xl:text-[35px]">
+            {t('educationTitle')}
           </h3>
-          <p className="font-normal text-primary/80 text-[20px] lg:text-[20px] xl:text-[24px]">
-            Akademia Górniczo-Hutnicza w Krakowie
+          <p className="font-normal text-primary/80 text-[20px]  xl:text-[24px]">
+            {t('educationText')}
           </p>
         </div>
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
-          <h3 className="font-bold text-[29px] lg:text-[29px] xl:text-[35px]">
-            Umiejętności
+          <h3 className="font-bold text-[29px]  xl:text-[35px]">
+            {t('skillsTitle')}
           </h3>
           <SkillList />
         </div>
@@ -63,7 +64,7 @@ export default function InfoContainer() {
         variants={itemVariants}
       >
         <h3 className="font-bold text-[29px] lg:text-[29px] xl:text-[35px]">
-            Doświadczenie
+            {t('experienceTitle')}
         </h3>
         <Timeline />
       </motion.div>

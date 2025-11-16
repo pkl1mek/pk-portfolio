@@ -6,10 +6,15 @@ import Link from 'next/link';
 import HeaderButton from './HeaderButton';
 import IconLink from './IconLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { useLanguage } from '@/context/LanguageContext';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState('');
+  
+  const { language, setLanguage } = useLanguage();
+  const t = useTranslations('Header');
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -29,6 +34,10 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'pl' ? 'en' : 'pl');
+  };
+
   return (
     <header className="w-full py-9 relative z-30">
       <nav className="flex items-center justify-between">
@@ -45,16 +54,36 @@ export default function Header() {
 
         <ul className="hidden lg:flex items-center gap-12 lg:gap-20">
           <li>
-            <HeaderButton href="#o-mnie" text="o mnie" />
+            <HeaderButton href="#about-me" text={t('o-mnie')} />
           </li>
           <li>
-            <HeaderButton href="#portfolio" text="portfolio" />
+            <HeaderButton href="#portfolio" text={t('portfolio')} />
           </li>
           <li>
-            <HeaderButton href="#kontakt" text="kontakt" />
+            <HeaderButton href="#contact" text={t('kontakt')} />
           </li>
           <li>
-            <HeaderButton href="#english" text="english" />
+            <button
+              onClick={toggleLanguage}
+              className="
+                group relative inline-block py-2
+                font-bold text-primary
+                transition-colors duration-300
+                hover:neon hover:neon-green
+                text-2xl  xl:text-[29px]
+              "
+            >
+              {t('toggle')}
+              <span 
+                className="
+                  absolute bottom-0 left-0 block h-[3px] w-full 
+                  transform scale-x-0 group-hover:scale-x-75 
+                  transition-transform duration-300 ease-in-out
+                  origin-left
+                  bg-white neon neon-green
+                "
+              />
+            </button>
           </li>
         </ul>
 
@@ -86,16 +115,39 @@ export default function Header() {
           <div className="flex flex-col items-start gap-8 pl-4">
             <ul className="flex flex-col items-start gap-8">
               <li>
-                <HeaderButton href="#o-mnie" text="o mnie" onClick={handleLinkClick} />
+                <HeaderButton href="#about-me" text={t('o-mnie')} onClick={handleLinkClick} />
               </li>
               <li>
-                <HeaderButton href="#portfolio" text="portfolio" onClick={handleLinkClick} />
+                <HeaderButton href="#portfolio" text={t('portfolio')} onClick={handleLinkClick} />
               </li>
               <li>
-                <HeaderButton href="#kontakt" text="kontakt" onClick={handleLinkClick} />
+                <HeaderButton href="#contact" text={t('kontakt')} onClick={handleLinkClick} />
               </li>
-              <li onClick={handleLinkClick}>
-                <HeaderButton href="#english" text="english" />
+              <li>
+                <button
+                  onClick={() => {
+                    toggleLanguage();
+                    handleLinkClick();
+                  }}
+                  className="
+                    group relative inline-block py-2
+                    font-bold text-primary
+                    transition-colors duration-300
+                    hover:neon hover:neon-green
+                    text-2xl
+                  "
+                >
+                  {t('toggle')}
+                  <span 
+                    className="
+                      absolute bottom-0 left-0 block h-[3px] w-full 
+                      transform scale-x-0 group-hover:scale-x-75 
+                      transition-transform duration-300 ease-in-out
+                      origin-left
+                      bg-white neon neon-green
+                    "
+                  />
+                </button>
               </li>
             </ul>
 

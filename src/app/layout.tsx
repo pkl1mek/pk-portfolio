@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 import './globals.css';
+import { LanguageProvider } from '@/context/LanguageContext';
 
 const satoshi = localFont({
   src: '../fonts/Satoshi-Variable.woff2',
@@ -24,12 +25,14 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${satoshi.variable}`}>
       <body className="bg-background text-primary bg-main-bg bg-no-repeat bg-center bg-cover bg-fixed">
-        <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-8  lg:px-16 xl:px-0">
-          <Header />
-          <main>{children}</main>
-        </div>
-        <Footer />
-        <ScrollToTopButton />
+        <LanguageProvider> 
+          <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
+            <Header />
+            <main>{children}</main>
+          </div>
+          <Footer />
+          <ScrollToTopButton />
+        </LanguageProvider> 
       </body>
     </html>
   );

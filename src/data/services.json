@@ -1,17 +1,17 @@
 [
   {
     "iconName": "web-development.svg",
-    "title": "Branding & Design",
-    "description": "Tworzę unikalne identyfikacje wizualne, które wyróżniają markę na rynku."
+    "titleKey": "service1_title",
+    "descriptionKey": "service1_desc"
   },
   {
     "iconName": "ux.svg",
-    "title": "Strony Webowe",
-    "description": "Buduję szybkie, responsywne i zoptymalizowane strony internetowe w Next.js."
+    "titleKey": "service2_title",
+    "descriptionKey": "service2_desc"
   },
   {
     "iconName": "graphic.svg",
-    "title": "Konsultacje UX/UI",
-    "description": "Analizuję i projektuję intuicyjne interfejsy, dbając o doświadczenia użytkownika."
+    "titleKey": "service3_title",
+    "descriptionKey": "service3_desc"
   }
 ]
