@@ -15,12 +15,13 @@ export default function SkillItem({ name, color }: SkillItemProps) {
         px-2 py-0.5 rounded-[24px]
         border-[2px] ${borderColorClass}
         neon ${neonColorClass}
+        will-change-transform
       `}
     >
       <span
         className={`
           text-primary font-bold 
-          text-sm lg:text-[14px] xl:text-[17px]
+          text-sm lg:text-xs xl:text-[17px]
         `}
       >
         {name}

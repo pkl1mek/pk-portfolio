@@ -37,10 +37,10 @@ export default function Service({ iconName, title, description }: ServiceProps) 
           className="object-contain neon neon-green"
         />
       </div>
-      <h3 className="font-bold text-primary text-[29px] lg:text-[20px] xl:text-[35px]">
+      <h3 className="font-bold text-primary text-[29px]  xl:text-[35px]">
         {title}
       </h3>
-      <p className="font-normal text-primary/80 text-[20px] lg:text-[14px] xl:text-[24px]">
+      <p className="font-normal text-primary/80 text-[20px]  xl:text-[24px]">
         {description}
       </p>
     </motion.div>

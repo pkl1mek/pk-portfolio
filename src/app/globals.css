@@ -1,8 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
 
 @tailwind base;
+a, 
+button, 
+input, 
+[tabindex] {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  
+  /* Hack na błędy renderowania w WebKit */
+  transform: translateZ(0); 
+}
+
 @tailwind components;
 @tailwind utilities;
-
 @keyframes slideInRight {
   from {
     transform: translateX(100%);

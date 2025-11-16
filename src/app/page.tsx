@@ -54,13 +54,13 @@ export default function HomePage() {
           w-full flex flex-col lg:flex-row
           items-center lg:items-start
           justify-between
-          gap-12 py-20
+          gap-12 py-12 lg:py-20
         "
           initial="hidden"
           animate="visible"
           variants={heroContainerVariants}
         >
-          <div className="flex flex-col gap-6 text-center lg:text-start">
+          <div className="flex flex-col gap-6 text-start">
             <motion.h1 
               className="sm:text-[41px] lg:text-[50px] xl:text-[72px] font-black text-primary leading-tight"
               variants={heroItemVariants}

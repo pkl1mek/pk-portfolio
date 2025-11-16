@@ -38,23 +38,26 @@ export default function SkillList() {
       <motion.div 
         className="flex flex-wrap items-end gap-2.5"
         layout
-        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
       >
-        {skillsToShow.map((skill, index) => (
-          <motion.div
-            key={skill.name}
-            variants={itemVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.3, delay: index * 0.05, ease: "easeIn" }}
-            layout
-          >
-            <SkillItem 
-              name={skill.name} 
-              color={skill.color} 
-            />
-          </motion.div>
-        ))}
+        <AnimatePresence>
+          {skillsToShow.map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.3, delay: index * 0.05, ease: "easeIn" }}
+              className="will-change-transform"
+            >
+              <SkillItem 
+                name={skill.name} 
+                color={skill.color} 
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
 
         <AnimatePresence>
           {hasMoreSkills && (

@@ -13,7 +13,7 @@ export default function HeaderButton({ href, text, onClick }: HeaderButtonProps)
   
   if (!href.startsWith('#')) {
     return (
-      <a href={href} className="... (klasy dla zwykłego linku, jeśli potrzebujesz)">
+      <a href={href} className="">
         {text}
       </a>
     );
