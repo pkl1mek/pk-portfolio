@@ -36,4 +36,4 @@ Welcome to the source code for my personal portfolio. This project was built fro
 ## ## ✉️ Contact
 
 * **Patryk Klimek** - [pk.pklimek@gmail.com](mailto:pk.pklimek@gmail.com)
-* **LinkedIn** - [https://www.linkedin.com/in/patryk-klimek-215993362]([https://linkedin.com/in/twoj-profil](https://www.linkedin.com/in/patryk-klimek-215993362))
+* **LinkedIn** - [https://www.linkedin.com/in/patryk-klimek-215993362](https://www.linkedin.com/in/patryk-klimek-215993362)
