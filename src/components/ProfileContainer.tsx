@@ -26,17 +26,17 @@ export default function ProfileContainer() {
           iconName="github.svg"
         />
         <IconLink
-          href="https://linkedin.com/in/twoj-profil"
+          href="https://www.linkedin.com/in/patryk-klimek-215993362"
           ariaLabel="Mój profil LinkedIn"
           iconName="linkedin.svg"
         />
         <IconLink
-          href="mailto:twoj-email@example.com"
+          href="mailto:pk.pklimek@gmail.com"
           ariaLabel="Napisz do mnie e-mail"
           iconName="mail.svg"
         />
         <IconLink
-          href="tel:+48123456789"
+          href="tel:+48792939551"
           ariaLabel="Zadzwoń do mnie"
           iconName="phone.svg"
         />

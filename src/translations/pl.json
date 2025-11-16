@@ -7,7 +7,7 @@
   },
   "HomePage": {
     "h1_1": "Tworzenie \nnowoczesnych",
-    "h1_2": "Stron Webowych\nBranding & Design",
+    "h1_2": "Stron webowych\nBranding & Design",
     "p": "Łączę estetykę z funkcjonalnością",
     "aboutTitle": "Kim jestem",
     "servicesTitle": "Czym się zajmuję",
@@ -15,9 +15,9 @@
   },
   "InfoContainer": {
     "title": "Opis",
-    "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse amet in blandit turpis gravida massa neque magna volutpat. Elit leo nulla arcu risus semper lacus.",
+    "description": "Jestem otwarty na podjęcie ciekawych wyzwań projektowych. Moim celem jest tworzenie intuicyjnych i estetycznych doświadczeń użytkownika w przestrzeni wirtualnej.",
     "educationTitle": "Wykształcenie",
-    "educationText": "Akademia Górniczo-Hutnicza w Krakowie",
+    "educationText": "Informatyka Społeczna (w trakcie) \n - Akademia Górniczo-Hutnicza w Krakowie",
     "skillsTitle": "Umiejętności",
     "experienceTitle": "Doświadczenie"
   },
@@ -31,7 +31,15 @@
     "typescript": "TypeScript",
     "javascript": "JavaScript (ES6+)",
     "figma": "Figma",
-    "nodejs": "Node.js"
+    "nodejs": "Node.js",
+    "html": "HTML",
+    "css": "CSS",
+    "github": "GitHub",
+    "english": "Angielski C1",
+    "teamwork": "Praca zespołowa",
+    "canva": "Canva",
+    "adobe": "Adobe",
+    "vscode": "V SCode"
   },
   "Experience": {
     "job_aiut_title": "Pracownik działu produkcji",
@@ -40,21 +48,21 @@
     "job_discurso_duration": "czerwiec-listopad 2025"
   },
   "Services": {
-    "service1_title": "Branding & Design",
-    "service1_desc": "Tworzę unikalne identyfikacje wizualne, które wyróżniają markę na rynku.",
-    "service2_title": "Strony Webowe",
-    "service2_desc": "Buduję szybkie, responsywne i zoptymalizowane strony internetowe w Next.js.",
-    "service3_title": "Konsultacje UX/UI",
-    "service3_desc": "Analizuję i projektuję intuicyjne interfejsy, dbając o doświadczenia użytkownika."
+    "service1_title": "Web-Development",
+    "service1_desc": "Buduję szybkie, responsywne i zoptymalizowane strony internetowe dopasowując je do potrzeb klienta.",
+    "service2_title": "UX/UI Design",
+    "service2_desc": "Tworzę rozwiązania cyfrowe z naciskiem na użyteczność i doświadczenia użytkownika.",
+    "service3_title": "Usługi Graficzne",
+    "service3_desc": "Projektuję szeroko pojęte materiały graficzne, od banerów po identyfikację wizualną."
   },
   "Footer": {
-    "description": "Lorem ipsum dolor sit amet consectetur. Tristique nec elementum amet cras egestas eget libero cras tempus. Sagittis pulvinar etiam hac hendrerit. Amet vestibulum orci velit diam. Non pellentesque maecenas ullamcorper vestibulum.",
+    "description": "Jesteś zainteresowany/ana współpracą lub masz pytania? Skontaktuj się ze mną, a chętnie omówię, jak mogę pomóc w realizacji Twoich projektów i celów.",
     "contactTitle": "Kontakt",
     "projectsTitle": "Projekty / Zlecenia",
     "privateTitle": "Prywatny"
   },
   "Projects": {
     "project_type_web": "Strona Webowa",
-    "project_type_design": "Projekt Graficzny"
+    "project_type_baner": "Baner"
   }
 }

@@ -1,9 +1,17 @@
 [
-  { "key": "react", "color": "blue" },
-  { "key": "nextjs", "color": "primary" },
-  { "key": "tailwind", "color": "green" },
-  { "key": "typescript", "color": "blue" },
-  { "key": "javascript", "color": "yellow" },
+  { "key": "react", "color": "yellow" },
   { "key": "figma", "color": "purple" },
-  { "key": "nodejs", "color": "green" }
+  { "key": "nextjs", "color": "yellow" },
+  { "key": "vscode", "color": "purple" },
+  { "key": "tailwind", "color": "yellow" },
+  { "key": "english", "color": "blue" },
+  { "key": "typescript", "color": "yellow" },
+  { "key": "javascript", "color": "yellow" },
+  { "key": "adobe", "color": "purple" },
+  { "key": "nodejs", "color": "yellow" },
+    { "key": "teamwork", "color": "blue" },
+  { "key": "html", "color": "yellow" },
+  { "key": "css", "color": "yellow" },
+  { "key": "github", "color": "yellow" },
+  { "key": "canva", "color": "purple" }
 ]

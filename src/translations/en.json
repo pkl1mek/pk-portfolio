@@ -7,17 +7,17 @@
   },
   "HomePage": {
     "h1_1": "Creating modern",
-    "h1_2": "Websites \nBranding & Design",
+    "h1_2": "Website pages \nBranding & Design",
     "p": "I combine aesthetics with functionality",
-    "aboutTitle": "About Me",
+    "aboutTitle": "About me",
     "servicesTitle": "What I do",
     "portfolioTitle": "Portfolio"
   },
   "InfoContainer": {
     "title": "Description",
-    "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse amet in blandit turpis gravida massa neque magna volutpat. Elit leo nulla arcu risus semper lacus.",
+    "description": "I am open to taking on interesting design challenges. My goal is to create intuitive and aesthetically pleasing user experiences in the virtual space.",
     "educationTitle": "Education",
-    "educationText": "AGH University of Science and Technology in Krakow",
+    "educationText": "Social Informatics (in progress) \n - AGH University of Krakow",
     "skillsTitle": "Skills",
     "experienceTitle": "Experience"
   },
@@ -31,30 +31,38 @@
     "typescript": "TypeScript",
     "javascript": "JavaScript (ES6+)",
     "figma": "Figma",
-    "nodejs": "Node.js"
+    "nodejs": "Node.js",
+    "html": "HTML",
+    "css": "CSS",
+    "github": "GitHub",
+    "english": "English C1",
+    "teamwork": "Teamwork",
+    "canva": "Canva",
+    "adobe": "Adobe",
+    "vscode": "VSCode"
   },
   "Experience": {
-    "job_aiut_title": "Production Department Employee",
+    "job_aiut_title": "Production worker",
     "job_aiut_duration": "July-October 2024",
     "job_discurso_title": "Front-end Developer Intern",
     "job_discurso_duration": "June-November 2025"
   },
   "Services": {
-    "service1_title": "Branding & Design",
-    "service1_desc": "I create unique visual identities that make brands stand out in the market.",
-    "service2_title": "Websites",
-    "service2_desc": "I build fast, responsive, and optimized websites in Next.js.",
-    "service3_title": "UX/UI Consultations",
-    "service3_desc": "I analyze and design intuitive interfaces, focusing on user experience."
+    "service1_title": "Web-Development",
+    "service1_desc": "I build fast, responsive, and optimized websites tailored to client needs.",
+    "service2_title": "UX/UI Design",
+    "service2_desc": "I create digital solutions with a focus on usability and user experience.",
+    "service3_title": "Graphic Services",
+    "service3_desc": "I design a wide range of graphic materials, from banners to visual identity."
   },
   "Footer": {
-    "description": "Lorem ipsum dolor sit amet consectetur. Tristique nec elementum amet cras egestas eget libero cras tempus. Sagittis pulvinar etiam hac hendrerit. Amet vestibulum orci velit diam. Non pellentesque maecenas ullamcorper vestibulum.",
+    "description": "Are you interested in collaboration or have questions? Contact me, and I will be happy to discuss how I can help you achieve your projects and goals.",
     "contactTitle": "Contact",
     "projectsTitle": "Projects / Commissions",
     "privateTitle": "Private"
   },
   "Projects": {
     "project_type_web": "Web Page",
-    "project_type_design": "Graphic Design"
+    "project_type_baner": "Banner"
   }
 }

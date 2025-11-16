@@ -65,7 +65,7 @@ export default function ProjectCard({
           xl:h-[400px]
           xl:w-[800px]
           flex-shrink-0
-          cursor-pointer
+          cursor-grab
           transition-transform duration-300 ease-in-out
           overflow-hidden
           shadow-[0_4px_30px_rgba(0,0,0,0.1)]

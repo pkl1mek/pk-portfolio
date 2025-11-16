@@ -30,6 +30,7 @@ module.exports = {
       'sm': '320px',
       'md': '768px',
       'lg': '1024px',
+      'l': '1440px',
       'xl': '1920px',
     },
     extend: {

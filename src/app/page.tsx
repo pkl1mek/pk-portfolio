@@ -161,7 +161,7 @@ export default function HomePage() {
             {t('portfolioTitle')}
             <AnimatedUnderline />
           </h2>
-          <div className="mt-20">
+          <div className="lg:mt-20">
             <ProjectScroller>
               {projectsData.map((project) => (
                 <ProjectCard

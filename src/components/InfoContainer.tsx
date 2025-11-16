@@ -17,7 +17,6 @@ export default function InfoContainer() {
 
   return (
     <div className="flex flex-1 flex-col gap-10 text-primary h-full min-w-0">
-      
       <motion.div 
         className="flex flex-col gap-2.5"
         initial="hidden"
