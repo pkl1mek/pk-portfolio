@@ -28,7 +28,7 @@ Welcome to the source code for my personal portfolio. This project was built fro
 * **Language:** TypeScript
 * **Styling:** Tailwind CSS
 * **Animation:** Framer Motion
-* **Deployment:** Vercel (or your host)
+* **Deployment:** Vercel
 
 ---
 
