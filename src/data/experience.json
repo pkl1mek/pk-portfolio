@@ -7,6 +7,13 @@
     "link": "https://aiut.com.pl"
   },
   {
+    "logoSrc": "/rehamedica.jpg",
+    "logoAlt": "Rehamedica",
+    "jobTitleKey": "job_rehamedica_title",
+    "workDurationKey": "job_rehamedica_duration",
+    "link": "https://wprehamedica.com"
+  },
+  {
     "logoSrc": "/discurso.png",
     "logoAlt": "Discurso.ai",
     "jobTitleKey": "job_discurso_title",
