@@ -11,8 +11,6 @@ input,
   appearance: none;
   outline: none !important;
   -webkit-tap-highlight-color: transparent !important;
-  
-  /* Hack na błędy renderowania w WebKit */
   transform: translateZ(0); 
 }
 

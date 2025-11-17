@@ -15,6 +15,21 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: 'Pk Projects',
   description: 'Patryk Klimek - Portfolio',
+  openGraph: {
+    title: 'Pk Projects',
+    description: 'Patryk Klimek - Portfolio',
+    url: 'https://pkprojects.pl',
+    siteName: 'Pk Projects',
+    images: [
+      {
+        url: 'https://pkprojects.pl/og-image.png',
+        width: 1000,
+        height: 1000,
+      },
+    ],
+    locale: 'pl_PL',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
