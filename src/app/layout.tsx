@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="pl" className={`${satoshi.variable}`}>
       <body className="bg-background text-primary bg-main-bg bg-no-repeat bg-center bg-cover bg-fixed">
         <LanguageProvider> 
-          <div className="w-full max-w-[1440px] mx-auto px-8 l:px-0">
+          <div className="w-full max-w-[1440px] mx-auto px-8 xl:px-0">
             <Header />
             <main>{children}</main>
           </div>
