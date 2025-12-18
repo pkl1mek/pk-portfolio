@@ -39,6 +39,9 @@
     "teamwork": "Praca zespołowa",
     "canva": "Canva",
     "adobe": "Adobe",
+    "django": "Django",
+    "framer": "Framer",
+    "vercel": "Vercel",
     "vscode": "VS Code"
   },
   "Experience": {

@@ -6,12 +6,15 @@
   { "key": "tailwind", "color": "yellow" },
   { "key": "english", "color": "blue" },
   { "key": "typescript", "color": "yellow" },
+  { "key": "framer", "color": "purple" },
   { "key": "javascript", "color": "yellow" },
   { "key": "adobe", "color": "purple" },
   { "key": "nodejs", "color": "yellow" },
-    { "key": "teamwork", "color": "blue" },
+  { "key": "teamwork", "color": "blue" },
   { "key": "html", "color": "yellow" },
+  { "key": "vercel", "color": "purple" },
   { "key": "css", "color": "yellow" },
   { "key": "github", "color": "yellow" },
-  { "key": "canva", "color": "purple" }
+  { "key": "canva", "color": "purple" },
+  { "key": "django", "color": "yellow" }
 ]
