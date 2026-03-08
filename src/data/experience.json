@@ -19,5 +19,12 @@
     "jobTitleKey": "job_discurso_title",
     "workDurationKey": "job_discurso_duration",
     "link": "https://discurso.ai"
+  },
+    {
+    "logoSrc": "/ibm.png",
+    "logoAlt": "IBM",
+    "jobTitleKey": "job_ibm_title",
+    "workDurationKey": "job_ibm_duration",
+    "link": "https://ibm.com"
   }
 ]

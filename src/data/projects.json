@@ -8,9 +8,9 @@
     "projectUrl": "#"
   },
   {
-    "typeKey": "project_type_baner",
-    "color": "purple",
-    "title": "Baner dla Adrian Gadawski",
+    "typeKey": "project_type_web",
+    "color": "blue",
+    "title": "Strona internetowa dla Adrian Gadawski",
     "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
     "imageUrl": "/a_gadawski.png",
     "projectUrl": "#"

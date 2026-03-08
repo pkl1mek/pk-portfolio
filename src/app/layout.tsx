@@ -15,6 +15,20 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: 'Pk Projects',
   description: 'Patryk Klimek - Portfolio',
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/logo_dark.svg',
+        href: '/logo_dark.svg',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/logo.svg',
+        href: '/logo.svg',
+      },
+    ],
+  },
   openGraph: {
     title: 'Pk Projects',
     description: 'Patryk Klimek - Portfolio',
