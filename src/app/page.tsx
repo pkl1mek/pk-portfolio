@@ -169,6 +169,7 @@ export default function HomePage() {
                   type={project.typeKey}
                   color={project.color}
                   imageUrl={project.imageUrl}
+                  projectUrl={project.projectUrl}
                 />
               ))}
             </ProjectScroller>

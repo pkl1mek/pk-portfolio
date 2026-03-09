@@ -5,7 +5,7 @@
     "title": "Strona internetowa dla RehaMedica",
     "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
     "imageUrl": "/rehamedica.png",
-    "projectUrl": "#"
+    "projectUrl": "https://www.wprehamedica.com"
   },
   {
     "typeKey": "project_type_web",
@@ -13,6 +13,6 @@
     "title": "Strona internetowa dla Adrian Gadawski",
     "description": "Lorem ipsum dolor sit amet consectetur. Faucibus eu odio turpis sed malesuada praesent volutpat in. Ultrices in sagittis enim tristique.",
     "imageUrl": "/a_gadawski.png",
-    "projectUrl": "#"
+    "projectUrl": "https://www.gadawskimeble.pl"
   }
 ]
